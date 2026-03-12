@@ -1,9 +1,12 @@
 [submodule "pmai-mai-core"]
 	path = pmai-mai-core
 	url = https://github.com/Semillero-Prometeo/pmai-mai-core.git
+	branch = dev
 [submodule "pmai-model-vision"]
 	path = pmai-model-vision
 	url = https://github.com/Semillero-Prometeo/pmai-model-vision.git
+	branch = dev
 [submodule "pmai-model-vision-language"]
 	path = pmai-model-vision-language
 	url = https://github.com/Semillero-Prometeo/pmai-model-vision-language.git
+	branch = dev
