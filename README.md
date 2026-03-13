@@ -16,3 +16,23 @@ git submodule update --init --recursive
 ```bash
 git submodule update --remote
 ```
+
+### 2. Configuracion de camaras
+
+winget install --interactive --exact dorssel.usbipd-win
+
+
+wsl --shtudown
+usbipd list
+
+usbipd bind --busid <Bus de las camaras>
+usbipd bind --busid 2-2
+
+usbipd list // Verificar shared
+
+// Abrir una terminal ubuntu para mantener la wsl activa
+
+usbipd attach --wsl --busid <busid>
+usbipd attach --wsl --busid 2-2
+
+ls -al /dev/video*
