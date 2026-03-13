@@ -1,0 +1,19 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/pmai-mai-core/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+
+  "python.analysis.extraPaths": ["${workspaceFolder}/pmai-mai-core/src"],
+  "python.analysis.typeCheckingMode": "basic",
+
+  "ruff.enable": true,
+  "ruff.path": ["${workspaceFolder}/pmai-mai-core/.venv/bin/ruff"],
+  "ruff.lint.run": "onSave",
+
+  "mypy-type-checker.path": ["${workspaceFolder}/pmai-mai-core/.venv/bin/mypy"],
+  "mypy-type-checker.importStrategy": "fromEnvironment",
+
+  "pytest.testing.enabled": true,
+  "pytest.testing.pytestPath": "${workspaceFolder}/pmai-mai-core/.venv/bin/pytest",
+  "pytest.testing.cwd": "${workspaceFolder}/pmai-mai-core",
+  "pytest.testing.pytestArgs": ["tests"]
+}

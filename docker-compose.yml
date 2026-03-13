@@ -1,0 +1,23 @@
+services:
+  nats:
+    image: nats:2.10-alpine
+    command: ["-js"]
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+
+  pmai-core:
+    build:
+      context: ./pmai-mai-core
+      dockerfile: dockerfile.dev
+    working_dir: /app
+    volumes:
+      - ./pmai-mai-core:/app
+    environment:
+      PMAI_SETTINGS: /app/settings.toml
+    depends_on:
+      - nats
+    ports:
+      - "8000:8000"
+    privileged: true
+    command: ["/bin/bash", "-lc", "python -m pmai_core /app/settings.toml"]
