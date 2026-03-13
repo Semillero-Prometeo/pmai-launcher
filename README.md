@@ -19,6 +19,9 @@ git submodule update --remote
 
 ### 2. Configuracion de camaras
 
+https://learn.microsoft.com/en-us/windows/wsl/connect-usb
+https://www.youtube.com/watch?v=t_YnACEPmrM
+
 winget install --interactive --exact dorssel.usbipd-win
 
 
