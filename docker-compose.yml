@@ -17,6 +17,7 @@ services:
     environment:
       NATS_SERVER: nats://nats-server:4222
       PMAI_SETTINGS: /app/settings.toml
+      PYTHONPATH: /app/src
     depends_on:
       - nats-server
     ports:
