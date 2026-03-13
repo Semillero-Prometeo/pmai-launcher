@@ -16,7 +16,7 @@ services:
     volumes:
       - ./pmai-mai-core:/app
       - ./pmai-model-vision/my_model:/models:ro
-      - /dev:/dev
+      # - /dev:/dev
     environment:
       NATS_SERVER: nats://nats-server:4222
       PMAI_SETTINGS: /app/settings.toml
@@ -26,8 +26,10 @@ services:
     ports:
       - "8000:8000"
     privileged: true
-    device_cgroup_rules:
-      - "c 81:* rmw"
+    # Prefer explicit device mappings when available; keep /dev bind for simplicity.
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
     command:
       - /bin/bash
       - -lc
