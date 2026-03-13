@@ -18,7 +18,7 @@ services:
       NATS_SERVER: nats://nats-server:4222
       PMAI_SETTINGS: /app/settings.toml
     depends_on:
-      - nats
+      - nats-server
     ports:
       - "8000:8000"
     privileged: true
