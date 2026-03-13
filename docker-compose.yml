@@ -25,4 +25,8 @@ services:
     ports:
       - "8000:8000"
     privileged: true
-    command: ["/bin/bash", "-lc", "python -m pmai_core /app/settings.toml"]
+    command:
+      - /bin/bash
+      - -lc
+      - >
+        watchfiles "python -m pmai_core /app/settings.toml" /app/src
