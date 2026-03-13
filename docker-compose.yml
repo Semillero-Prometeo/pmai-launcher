@@ -15,6 +15,7 @@ services:
     working_dir: /app
     volumes:
       - ./pmai-mai-core:/app
+      - ./pmai-model-vision/my_model:/models:ro
     environment:
       NATS_SERVER: nats://nats-server:4222
       PMAI_SETTINGS: /app/settings.toml
