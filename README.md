@@ -39,3 +39,11 @@ usbipd attach --wsl --busid <busid>
 usbipd attach --wsl --busid 2-2
 
 ls -al /dev/video*
+
+
+sudo apt update && sudo apt upgrade -y && sudo apt install -y build-essential flex bison libgtk2.0-dev libelf-dev libncurses-dev autoconf libudev-dev libtool zip unzip v4l-utils libssl-dev python3-pip cmake git iputils-ping net-tools dwarves
+
+
+# Probar la camara WSL/Linux
+sudo apt install v4l-utils guvcview
+sudo guvcview
