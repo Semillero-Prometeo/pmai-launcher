@@ -20,6 +20,9 @@ services:
       NATS_SERVER: nats://nats-server:4222
       PMAI_SETTINGS: /app/settings.toml
       PYTHONPATH: /app/src
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
     depends_on:
       - nats-server
     ports:
